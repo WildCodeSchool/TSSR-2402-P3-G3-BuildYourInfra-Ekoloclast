@@ -5,10 +5,11 @@
 **Domaine : ekoloclast.fr**
 _idem messagerie existante_
 
-Name : PARSRVAD01
+Name : PARSRVDC01
 IP fixe : 192.168.0.1
 
-## 2. OU (Organizational Unit)
+
+## 2. OU Utilisateurs
 
 - **DPTDsi**
   - (UO) Service
@@ -95,25 +96,23 @@ IP fixe : 192.168.0.1
   - (UO) Recrutement
     - (GRP) RECagentRH
   - (UO) SanteEtSecuriteTravail
-    - (GRP) SST
-    - (GRP) SST
-    - (GRP) SST
+    - (GRP) SSTanimateursecurite
+    - (GRP) SSTauditeur
+    - (GRP) SSTtechnicienHSE
 
 - **DPTServiceGeneraux**
   - (UO) GestionImmobiliere
-    - (GRP) GIM
-    - (GRP) GIM
+    - (GRP) GIMgestionnaireimmobilier
   - (UO) Logistique
-    - (GRP) LOG
-    - (GRP) LOG
+    - (GRP) LOGagentlogistique
+    - (GRP) LOGresponsablelogistique
 
 - - **DPTServiceGeneraux**
   - (UO) Contrat
-    - (GRP) CNT
-    - (GRP) CNT
+    - (GRP) CNTjuriste
+    - (GRP) CNTresponsablejuridique
   - (UO) Contancieux
-    - (GRP) CTX
-    - (GRP) CTX
+    - (GRP) CTXjuriste
 
 - **DPTVDcommercial**
   - (UO)  ADV
@@ -126,21 +125,56 @@ IP fixe : 192.168.0.1
     - (GRP) B2Ccommercial
     - (GRP) B2Cresponsable
   - (UO) Developpementinternational
-    - (GRP) DEV
-    - (GRP) DEV
+    - (GRP) DEVcommercial
+    - (GRP) DEVdirectioncommercial
   - (UO) GrandComptes
-    - (GRP) GRC
-    - (GRP) GRC
+    - (GRP) GRCcommercial
+    - (GRP) GRCresponsableachat
   - (UO) Servicesachats
-    - (GRP) SAC
-    - (GRP) SAC
+    - (GRP) SACacheteur
+    - (GRP) SACresponsableachat
   - (UO) ServiClient
-    - (GRP) SCL
-    - (GRP) SCL
+    - (GRP) SCLacheteur
+    - (GRP) SCLresponsableachat
 
-## 3. Groupes de sécurité
+## 3. OU GroupesDeSécurité (a définir ultérieurement)
+
+OU SecutityUtilisateurs 
+OU SecutityOrdinateurs
 
 ## 4. Ordinateurs
 
+- Serveurs DC :
+Localisation + SRV + fonction + n°
+
+exemple : **PARSRVDC1**
+
+- Serveurs : 
+
+**PARSRVDATA01, PARSRVWEB01, PARSRVDNS01, PARSRVDHCP01...**
+
+- Poste Clients :
 Uniquement PC portables
 Existant nom type = PXXXX (4 chiffres)
+
+## 5. Utilisateurs
+
+Convention nomage
+
+exemple : Alice Perrin 
+
+Id : "3 premières lettres du nom" + "." + "prénom"
+
+**ID : per.alice**
+
+(Si doublon, incrémentation 1 chiffre à la suite)
+
+
+## 6. GPO (en attente traitement)
+
+- Convention de nommage
+	- Cible/fonction (user, sec, config, ...)
+	- Portée (global, domain, marketing, ...)
+	- Version/date de révision
+	- id
+	- but/destination
