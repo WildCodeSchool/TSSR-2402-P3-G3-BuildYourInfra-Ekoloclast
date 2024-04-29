@@ -163,9 +163,9 @@ Convention nomage
 
 exemple : Alice Perrin 
 
-Id : "3 premières lettres du nom" + "." + "prénom"
+Id : "3 premières lettres du prénom" + "." + "nom"
 
-**ID : per.alice**
+**ID : ali.perrin**
 
 (Si doublon, incrémentation 1 chiffre à la suite)
 
