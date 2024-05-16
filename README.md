@@ -25,4 +25,4 @@ Chaque collaborateur est équipé d'un ordinateur portable en WORKGOUP sous le p
 | Sprint  |  Team   | Nicolas | Luca | Patrick | Grégory |
 |   :---------: |  :-------: | :---------: |  :-------: | :-------: |  :-------:  |
 | 09 |  Analyse des besoins techniques - Choix Nomenclature et Plan IP| **PO** - Schema réseau | **SM** - Arborescence AD | Script fichier csv | Prépa VM et AD |
-| 10 |  Configuration AD DS | Script de création arborecense AD | Création et configuration Serveur Core Master - Edition du fichier README| **PO** - Script pour fichier CSV - Création poste client | **SM** - Création et configuration du Serveur maître en GUI - Edition du fichier Instal.MD
+| 10 |  Configuration AD DS | Script de création arborecense AD | Création et configuration Serveur Core Master - Edition du fichier README| **PO** - Script pour fichier CSV - Création poste client | **SM** - Création et configuration du Serveur maître en GUI - Edition du fichier Install.MD
