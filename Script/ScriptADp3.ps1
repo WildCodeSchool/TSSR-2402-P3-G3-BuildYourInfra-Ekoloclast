@@ -36,12 +36,12 @@ function Menu {
                 Write-Host " "
                 GestUsers
             }
-            '1' {
+            '3' {
                 #Gestion des ordinateurs
                 write-host " "
                 GestComputer
             }
-            '1' {
+            '4' {
                 #Gestion des groupes
                 write-host " "
                 GestGroup
@@ -296,11 +296,11 @@ function GestComputer {
         switch ($choiceGC) {
             '1' {
                 #Fonction Création d'ordinateurs
-                Arreter-Client
+                
             }
             '2' {
                 #Fonction Création de plusieurs ordinateurs à partir d'une liste
-                Restart-Computer
+                
             }
             '3' {
                 #Fonction Recherche de doublon d'ordinateurs
@@ -335,7 +335,7 @@ function GestGroup {
     while ($true) {
         #Affichage du menu Gestion des groupes
         Write-Host "Gestion des groupes"
-        Write-Host "1. Création de groupes à partir d'une liste"
+        Write-Host "1. Création de groupes manuelle"
         Write-Host "2. Remplissage de groupe à partir des OU"
         Write-Host "R. Retour au menu précédent
         "
@@ -344,12 +344,12 @@ function GestGroup {
         # Redirection des choix 
         switch ($choiceGC) {
             '1' {
-                #Fonction Création de groupes à partir d'une liste
-                Arreter-Client
+                #Fonction Création de groupes manuelle
+                createGRPman
             }
             '2' {
                 #Fonction Remplissage de groupe à partir des OU
-                Restart-Computer
+                
             }
             '3' {
                 #Fonction Recherche de doublon d'ordinateurs
@@ -372,5 +372,49 @@ function GestGroup {
         }
     }
 }
+
+#######################################
+#                                     #
+#   Création GROUPE manuelle          #
+#                                     #
+#######################################
+
+
+function createGRPman {
+
+    ### Parametre(s) à modifier
+
+    Write-Host "Dans quel OU principal ?"
+    Write-Host "1. LabUtilisateurs"
+    Write-Host "2. LabOrdinateurs"
+    Write-Host "3. LabSecurite"
+    $choiceOUPrincipale = Read-Host "Entrez le numero souhaite"
+    switch ($choiceOUPrincipale) {
+        '1' { $OUPrincipale = "LabUtilisateurs" }
+        '2' { $OUPrincipale = "LabOrdinateurs" }
+        '3' { $OUPrincipale = "LabSecurite" }
+    }
+
+    #$OUPrincipale = "$OUPrincipale"
+    $Groups = Read-Host "Nom des groupes a creer (mettre une virgule entre chaque nom)"
+    $Groups
+    ### Initialisation
+
+    $DomainDN = (Get-ADDomain).DistinguishedName
+
+    ### Main program
+
+    Foreach ($Group in $Groups) {
+        Try {
+            New-AdGroup -Name $Group -Path "ou=$OUPrincipale,$DomainDN" -GroupScope Global -GroupCategory Security
+            Write-Host "Création du GROUPE $Group dans l'OU ou=$OUPrincipale,$DomainDN"-ForegroundColor Green
+        }
+        Catch {
+            Write-Host "Le GROUPE $Group existe déjà" -ForegroundColor Yellow -BackgroundColor Black
+        }
+    }
+}
+
+
 
 Menu
