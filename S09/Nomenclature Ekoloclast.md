@@ -5,137 +5,142 @@
 **Domaine : ekoloclast.fr**
 _idem messagerie existante_
 
-Name : PARSRVDC01
-IP fixe : 192.168.0.1
+Serveur ADDS/DNS/DHCP
+Name : EKO-MSTR
+IP fixe : 192.168.0.2
+
+Serveur ADDS Core
+Name : EKO-CORE
+IP : 192.168.0.3
 
 
 ## 2. OU Utilisateurs
 
 - **DPTDsi**
-  - (UO) Service
-    - (GRP) SERDatascientist
-  - (UO) DeveloppemeLogiciel
-    - (GRP) DEVDeveloppeur
-    - (GRP) DEVIntegrateur
-  - (UO) SUPPORT
-    - (GRP) SUPHotliner
-  - (UO) Dsi
+  - (OU) Service
+    - (OU) SERDatascientist
+  - (OU) DeveloppemeLogiciel
+    - (OU) DEVDeveloppeur
+    - (OU) DEVIntegrateur
+  - (OU) SUPPORT
+    - (OU) SUPHotliner
+  - (OU) Dsi
 
 
 
 - **DPTCommunication**
-  - (UO) Publicite
-    - (GRP) PUBChargedecommunication
-    - (GRP) PUBDesignergraphique
-    - (GRP) PUBIngenieurson
-    - (GRP) PUBphotographe
-    - (GRP) PUBPublicitaire
-    - (GRP) PUBRealisateur
-    - (GRP) PUBResponsablepublicite
-    - (GRP) PUBWebmaster
-  - (UO) RelationPuliqueEtPresse
-     - (GRP) RELChargedecommunication
-     - (GRP) RELChargedepresse
-     - (GRP) RELChargeendroitdelacommunication
-     - (GRP) RELResponsablerelationmedia
-  - (UO) Directioncommunication
+  - (OU) Publicite
+    - (OU) PUBChargedecommunication
+    - (OU) PUBDesignergraphique
+    - (OU) PUBIngenieurson
+    - (OU) PUBphotographe
+    - (OU) PUBPublicitaire
+    - (OU) PUBRealisateur
+    - (OU) PUBResponsablepublicite
+    - (OU) PUBWebmaster
+  - (OU) RelationPuliqueEtPresse
+     - (OU) RELChargedecommunication
+     - (OU) RELChargedepresse
+     - (OU) RELChargeendroitdelacommunication
+     - (OU) RELResponsablerelationmedia
+  - (OU) Directioncommunication
 
 - **DPTDirectionFinanciere**
-  - (UO) ControleDeGestion
-    - (GRP) CDGControledegestion
-  - (UO) Finance
-    - (GRP) FINAnalystefinancier
-    - (GRP) FINDaf
-  - (UO) ServiceComptabilite
-    - (GRP) SCOComptable
+  - (OU) ControleDeGestion
+    - (OU) CDGControledegestion
+  - (OU) Finance
+    - (OU) FINAnalystefinancier
+    - (OU) FINDaf
+  - (OU) ServiceComptabilite
+    - (OU) SCOComptable
 
 - **DPTDirectiongenerale**
-  - (GRP) Assistantdedirection
-  - (GRP) Secrétaire
-  - (GRP) CEO
-  - (GRP) Directeuradjoint
+  - (OU) Assistantdedirection
+  - (OU) Secrétaire
+  - (OU) CEO
+  - (OU) Directeuradjoint
 
 
 - **DPTDirectionmarketing**
-  - (UO)  Marketing Digital
-    - (GRP) MDIAnalysteweb
-    - (GRP) MDI
-    - (GRP) MDI
-    - (GRP) MDI
-  - (UO) MarketingOperationnel
-    - (GRP) MOP
-    - (GRP) MOP
-    - (GRP) MOP
-    - (GRP) MOP
-    - (GRP) MOP
-  - (UO) MarketingProduit
-    - (GRP) MPR
-    - (GRP) MPR
-    - (GRP) MPR
-  - (UO) MarketingStrategique
-    - (GRP) MST
-    - (GRP) MST
-    - (GRP) MST
+  - (OU)  Marketing Digital
+    - (OU) MDIAnalysteweb
+    - (OU) MDI
+    - (OU) MDI
+    - (OU) MDI
+  - (OU) MarketingOperationnel
+    - (OU) MOP
+    - (OU) MOP
+    - (OU) MOP
+    - (OU) MOP
+    - (OU) MOP
+  - (OU) MarketingProduit
+    - (OU) MPR
+    - (OU) MPR
+    - (OU) MPR
+  - (OU) MarketingStrategique
+    - (OU) MST
+    - (OU) MST
+    - (OU) MST
 
 - **DPTRD**
-  - (UO) InnovationEtStrategie
-    - (GRP) IESchercheur
-    - (GRP) IESResponsablerecherche
-  - (UO) Laboratoire
-    - (GRP) LABlaorantin
-    - (GRP) LABresponsableLaborantin
+  - (OU) InnovationEtStrategie
+    - (OU) IESchercheur
+    - (OU) IESResponsablerecherche
+  - (OU) Laboratoire
+    - (OU) LABlaorantin
+    - (OU) LABresponsableLaborantin
 
 - **DPTRH**
-  - (UO)  DirectionRH
-    - (GRP) DRHdirecteur
-    - (GRP) DRHdirecteuradjoint
-  - (UO) Formation
-    - (GRP) FORformateur
-  - (UO) Gestiondesperformances
-    - (GRP) GDPagentRH
-  - (UO) Recrutement
-    - (GRP) RECagentRH
-  - (UO) SanteEtSecuriteTravail
-    - (GRP) SSTanimateursecurite
-    - (GRP) SSTauditeur
-    - (GRP) SSTtechnicienHSE
+  - (OU)  DirectionRH
+    - (OU) DRHdirecteur
+    - (OU) DRHdirecteuradjoint
+  - (OU) Formation
+    - (OU) FORformateur
+  - (OU) Gestiondesperformances
+    - (OU) GDPagentRH
+  - (OU) Recrutement
+    - (OU) RECagentRH
+  - (OU) SanteEtSecuriteTravail
+    - (OU) SSTanimateursecurite
+    - (OU) SSTauditeur
+    - (OU) SSTtechnicienHSE
 
 - **DPTServiceGeneraux**
-  - (UO) GestionImmobiliere
-    - (GRP) GIMgestionnaireimmobilier
-  - (UO) Logistique
-    - (GRP) LOGagentlogistique
-    - (GRP) LOGresponsablelogistique
+  - (OU) GestionImmobiliere
+    - (OU) GIMgestionnaireimmobilier
+  - (OU) Logistique
+    - (OU) LOGagentlogistique
+    - (OU) LOGresponsablelogistique
 
 - - **DPTServiceGeneraux**
-  - (UO) Contrat
-    - (GRP) CNTjuriste
-    - (GRP) CNTresponsablejuridique
-  - (UO) Contancieux
-    - (GRP) CTXjuriste
+  - (OU) Contrat
+    - (OU) CNTjuriste
+    - (OU) CNTresponsablejuridique
+  - (OU) Contancieux
+    - (OU) CTXjuriste
 
 - **DPTVDcommercial**
-  - (UO)  ADV
-    - (GRP) ADVgestionnaire
-    - (GRP) ADVresponsable
-  - (UO) B2B
-    - (GRP) B2Bcommercial
-    - (GRP) B2Bresponsable
-  - (UO) B2C
-    - (GRP) B2Ccommercial
-    - (GRP) B2Cresponsable
-  - (UO) Developpementinternational
-    - (GRP) DEVcommercial
-    - (GRP) DEVdirectioncommercial
-  - (UO) GrandComptes
-    - (GRP) GRCcommercial
-    - (GRP) GRCresponsableachat
-  - (UO) Servicesachats
-    - (GRP) SACacheteur
-    - (GRP) SACresponsableachat
-  - (UO) ServiClient
-    - (GRP) SCLacheteur
-    - (GRP) SCLresponsableachat
+  - (OU)  ADV
+    - (OU) ADVgestionnaire
+    - (OU) ADVresponsable
+  - (OU) B2B
+    - (OU) B2Bcommercial
+    - (OU) B2Bresponsable
+  - (OU) B2C
+    - (OU) B2Ccommercial
+    - (OU) B2Cresponsable
+  - (OU) Developpementinternational
+    - (OU) DEVcommercial
+    - (OU) DEVdirectioncommercial
+  - (OU) GrandComptes
+    - (OU) GRCcommercial
+    - (OU) GRCresponsableachat
+  - (OU) Servicesachats
+    - (OU) SACacheteur
+    - (OU) SACresponsableachat
+  - (OU) ServiClient
+    - (OU) SCLacheteur
+    - (OU) SCLresponsableachat
 
 ## 3. OU GroupesDeSécurité (a définir ultérieurement)
 
