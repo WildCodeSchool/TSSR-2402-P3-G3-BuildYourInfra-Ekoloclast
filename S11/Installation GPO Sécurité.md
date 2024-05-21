@@ -33,7 +33,7 @@ Accèder à l'interface de gestion des GPO :
 
 ## 2. Politique de mot de passe
 
-Créer le groupe ``GrpComputersPasswordPolicy` dans l'OU LabSecurité.
+Créer le groupe ``GrpComputersPasswordPolicy`` dans l'OU LabSecurité.
 
 - Cliquer sur ``Tools`` puis ``Group Policy Management``
 - Dans le dossier Group Policy Objects clic droit puis New
@@ -67,7 +67,7 @@ Créer le groupe ``GrpComputersLock` dans l'OU LabSecurité.
 - **Computeur Configuration → Policies → Windows Settings → Security Settings → Account Policy → Account Lockout Policy**
 
    > - **Account lockout duration** → 45 minutes _(Après 5 tentatives e mdp, le compte sera vérouiller pendant 45 minutes)_
-   > - **Account lockout threshold** → 35 invalid logon attempts _(Le compte se vérouille après 5 tentatives incorrectes)_
+   > - **Account lockout threshold** → 5 invalid logon attempts _(Le compte se vérouille après 5 tentatives incorrectes)_
    > - `**Reset Lockout counter after** → 15 minutes _(Le compteur du mot de passe érroné revient à 0 au bout de 15 minutes)_
 
 
