@@ -85,7 +85,7 @@ Accèder à l'interface de gestion des GPO :
 
 
 ## 5. Restriction d'installation de logiciel pour les utilisateurs non-administrateurs
-
+git
 
 - Cliquer sur ``Tools`` puis ``Group Policy Management``
 - Dans le dossier Group Policy Objects clic droit puis New
@@ -106,7 +106,6 @@ Accèder à l'interface de gestion des GPO :
 - Cliquer sur ``Tools`` puis ``Group Policy Management``
 - Dans le dossier Group Policy Objects clic droit puis New
 - Nommer la GPO **"Computeur-WindowsUpdate-Configuration"**
-- Dans l'onglet Scope partie Security Filtering supprimer ``Authenticated Users`` et ajouter le groupe ``Domain Computers``
 - Cette GPO s'appliquera sur les ordinateurs, dans l'onglet détail choisir  ``GPO Statuts : User configuration settings disabled``
 - Clic droit sur la GPO puis ``Edit``
 - **Computeur Configuration → Policies → Administrative Templates → Windows Components → Windows Update**
@@ -128,7 +127,6 @@ Accèder à l'interface de gestion des GPO :
 - Cliquer sur ``Tools`` puis ``Group Policy Management``
 - Dans le dossier Group Policy Objects clic droit puis New
 - Nommer la GPO **"User-ScreenSaver-Enable"**
-- Dans l'onglet Scope partie Security Filtering supprimer ` et ajouter le groupe ``Domain Computers``
 - Cette GPO s'appliquera sur les utilisateurs, dans l'onglet détail choisir  ``GPO Statuts : Computer configuration settings disabled``
 - Clic droit sur la GPO puis ``Edit``
 - User Configuration → Policies → Administrative Templates → Control Panel → Personalization
@@ -148,7 +146,6 @@ Accèder à l'interface de gestion des GPO :
 - Cliquer sur ``Tools`` puis ``Group Policy Management``
 - Dans le dossier Group Policy Objects clic droit puis New
 - Nommer la GPO **"Computeur-GuestAcount-Disable"**
-- Dans l'onglet Scope partie Security Filtering supprimer ``Authenticated Users`` et ajouter le groupe ``Domain Computers``
 - Cette GPO s'appliquera sur les ordinateurs, dans l'onglet détail choisir  ``GPO Statuts : User configuration settings disabled``
 - Clic droit sur la GPO puis ``Edit``
 - **Computer Configuration -> Windows Settings -> Security Settings -> Local Policies -> Security Options**
@@ -166,7 +163,6 @@ Accèder à l'interface de gestion des GPO :
 - Cliquer sur ``Tools`` puis ``Group Policy Management``
 - Dans le dossier Group Policy Objects clic droit puis New
 - Nommer la GPO **"Computeur-GuestAcount-Disable"**
-- Dans l'onglet Scope partie Security Filtering supprimer ``Authenticated Users`` et ajouter le groupe ``Domain Computers``
 - Cette GPO s'appliquera sur les ordinateurs, dans l'onglet détail choisir  ``GPO Statuts : User configuration settings disabled``
 - Clic droit sur la GPO puis ``Edit``
 - **Computer Configuration -> Windows Settings -> Security Settings -> Local Policies -> Security Options**
@@ -182,7 +178,6 @@ Accèder à l'interface de gestion des GPO :
 - Cliquer sur ``Tools`` puis ``Group Policy Management``
 - Dans le dossier Group Policy Objects clic droit puis New
 - Nommer la GPO **"User-AccessCMD-Block"**
-- Dans l'onglet Scope partie Security Filtering supprimer ` et ajouter le groupe ``Domain Computers``
 - Cette GPO s'appliquera sur les utilisateurs, dans l'onglet détail choisir  ``GPO Statuts : Computer configuration settings disabled``
 - Clic droit sur la GPO puis ``Edit``
 - User Configuration -> Administrative Templates -> System 
