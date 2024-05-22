@@ -1,6 +1,6 @@
 # Installation GPO Sécurité
 
-## 1. Blocage l'accès au panneau de configuration
+## 1. Blocage accès au panneau de configuration
 
 Créer le groupe ``GrpUsersWindowsRestrictions`` dans l'OU LabSecurité.
 
