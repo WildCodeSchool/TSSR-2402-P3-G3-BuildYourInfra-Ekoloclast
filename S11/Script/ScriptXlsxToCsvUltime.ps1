@@ -16,7 +16,6 @@ $data = Import-Excel -Path $fichierXLSX
 # Exporter les données dans un fichier CSV avec encodage UTF-8 avec BOM
 $data | Export-Csv -Path $fichierCSV -Encoding UTF8 -NoTypeInformation
 
-
 # Définition de la fonction Remove-StringSpecialCharacters
 function Remove-StringSpecialCharacters {
    param ([string]$String)
@@ -39,7 +38,6 @@ function Remove-StringSpecialCharacters {
    }
 }
 
-
 # Lire le contenu du fichier d'entrée
 $contenu = Get-Content -path $fichierCSV
 
@@ -51,55 +49,34 @@ $contenuTraite = foreach ($ligne in $contenu) {
 # Écrire les lignes traitées dans un nouveau fichier
 $contenuTraite | Out-File -FilePath $fichierCSV -Encoding utf8
 
-$fileSourceU = Import-Csv  $fichierCSV
-$fileSourceC = Import-Csv  $fichierCSV
-
+$fileSource = Import-Csv  $fichierCSV
 
 # Ajouter une nouvelle colonne avec des valeurs statiques
 
-foreach ($ligne in $fileSourceU) {
+foreach ($ligne in $fileSource) {
    # Extraire le nom de la fonction
    $fonction = $ligne.fonction
 
    # Vérifier si la colonne "Service" a au moins 3 caractères
    if ($ligne.Service.Length -ge 3) {
       # Récupérer les trois premières lettres de la colonne "Service"
-      $service = $ligne.Service.Substring(0, 3)
+      $service = $ligne.Service.Substring(0, 3) + "_"
    }
    else {
       # Si la longueur est inférieure à 3, utiliser la chaîne entière
       $service = $ligne.Service
    }
    # Construire le terme final
-   $termeFinal = "User`_$fonction`_$service"
+   $termeFinal = "$service$fonction"
 
    $ligne | Add-Member -MemberType NoteProperty -Name "OUPrincipale" -Value "LabUtilisateurs"
    $ligne | Add-Member -MemberType NoteProperty -Name "FonctionModif" -Value "$termeFinal"
 }
 
 
-foreach ($ligne in $fileSourceC) {
-   # Extraire le nom de la fonction
-   $fonction = $ligne.fonction
 
-   # Vérifier si la colonne "Service" a au moins 3 caractères
-   if ($ligne.Service.Length -ge 3) {
-      # Récupérer les trois premières lettres de la colonne "Service"
-      $service = $ligne.Service.Substring(0, 3)
-   }
-   else {
-      # Si la longueur est inférieure à 3, utiliser la chaîne entière
-      $service = $ligne.Service
-   }
-   # Construire le terme final
-   $termeFinal = "Comp`_$fonction`_$service"
-   
-   $ligne | Add-Member -MemberType NoteProperty -Name "OUPrincipale" -Value "LabOrdinateurs"
-   $ligne | Add-Member -MemberType NoteProperty -Name "FonctionModif" -Value "$termeFinal"
-}
+$fileSource | Export-CSV -Path $fichierCSV -Delimiter ";" -NoTypeInformation
 
-$fileSourceU | Export-CSV -Path $fichierCSV -Delimiter ";" -NoTypeInformation
-$fileSourceC | Export-CSV -Path $fichierCSV -Delimiter ";" -NoTypeInformation -Append
 
 
 
