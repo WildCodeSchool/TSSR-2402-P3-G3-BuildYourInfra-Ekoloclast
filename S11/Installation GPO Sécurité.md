@@ -186,3 +186,39 @@ Accèder à l'interface de gestion des GPO :
    - Disable the commande prompt script processing also? -> ``Yes``
 
 - Lier cette GPO à l'OU LabUtilisateurs : clic droit puis "Link an Existing GPO"
+
+## 11. Gestion d'un compte du domaine qui est administrateur local des machines
+
+- Dans l'OU LabSecuirté, créer un groupe de sécurité Active Directory nommé "Grp-Admins-PC"
+
+![grpadminpc](https://github.com/WildCodeSchool/TSSR-2402-P3-G3-BuildYourInfra-Ekoloclast/blob/main/S11/captureGPO/grpadminpc.PNG?raw=true)
+
+Accèder à l'interface de gestion des GPO : 
+
+- Cliquer sur ``Tools`` puis ``Group Policy Management``
+- Dans le dossier Group Policy Objects clic droit puis New
+- Nommer la GPO **"Computeur-Admin-PC"**
+- Cette GPO s'appliquera sur les ordinateurs, dans l'onglet détail choisir  ``GPO Statuts : User configuration settings disabled``
+- Clic droit sur la GPO puis ``Edit``
+- **Computer Configuration -> Preferences -> Control Panel Settings -> Local Users and Groups**
+- Clic droit -> ``New`` -> ``Local Group``
+- Action : ``update``
+- Group name : ``Administrators``
+- cocher les cases ``Delete all member users`` et ``Delete all member groups``
+- Dans la partie Members : Add -> Grp-Admins-PC
+
+![adminlocal](https://github.com/WildCodeSchool/TSSR-2402-P3-G3-BuildYourInfra-Ekoloclast/blob/main/S11/captureGPO/adminlocal.PNG?raw=true)
+
+**_Si un utilisateur ou un groupe est ajouté à la main sur un poste, ce sera écrasé lorsque la GPO va se réappliquer_**
+
+- Lier cette GPO à l'OU LabOrdinateurs : clic droit puis "Link an Existing GPO"
+
+Par la suite il conviendra d'ajouter les utilisateurs du support  au groupe Grp-Admins-PC.
+
+
+
+
+
+
+
+
