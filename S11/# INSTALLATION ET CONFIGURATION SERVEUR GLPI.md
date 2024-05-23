@@ -11,17 +11,17 @@
     
 La première étape consiste à installer les paquets LAMP (Linux Apache2 MariaDB PHP).
     
-<span style="color: red;">apt-get install apache2 php mariadb-server</span>
+```apt-get install apache2 php mariadb-server```
     
     
 Ensuite, installer toutes les extensions nécessaires au bon fonctionnement de GLPI.
     
-<span style="color: red;">sudo apt-get install php-xml php-common php-json php-mysql php-mbstring php-curl php-gd php-intl php-zip php-bz2 php-imap php-apcu</span>
+```apt-get install php-xml php-common php-json php-mysql php-mbstring php-curl php-gd php-intl php-zip php-bz2 php-imap php-apcu```
     
     
 Pour associer GLPI avec l'Active Directory, il faut installer l'extension LDAP de PHP.
     
-<span style="color: red;">sudo apt-get install php-ldap</span>
+```apt-get install php-ldap```
     
     
     
@@ -31,7 +31,7 @@ Il faut préparer MariaDB pour qu'il puisse héberger la base de données de GLP
     
 Pour commencer il faut effectuer.
     
-<span style="color: red;">mysql_secure_installation</span>
+```mysql_secure_installation```
     
 Ici plusieurs option s'affiche pour une bonne configuration suivre l'exemple de l'image ci-dessous :
     
@@ -41,7 +41,8 @@ ce qui doit donner :
     
 Ensuite on se connecte à notre instance MariaDB.
     
-<span style="color: red;">mysql -u root -p</span>
+```mysql -u root -p```
+   
 Saisire le mot de passe précédement definie.
     
 Il faut maintenant exécuter les requêtes SQL ci-dessous pour créé la base de donné ici "glpi_23", ansi que l'utilisateur "glpi_adm".
@@ -59,50 +60,49 @@ Il faut maintenant télécharger l'archiver ".tgz" qui contient les sources d'in
     
 Se rendre dans le dossier /tmp
     
-<span style="color: red;">cd /tmp</span>
+```cd /tmp```
     
 Puis faire
-<span style="color: red;">wget https://github.com/glpi-project/glpi/releases/download/10.0.15/glpi-10.0.15.tgz
-</span>
+```wget https://github.com/glpi-project/glpi/releases/download/10.0.15/glpi-10.0.15.tgz```
     
 Il faut ensuite decomprésser l'archive .tgz dans le dossier /var/www .
     
-<span style="color: red;">tar -xzvf glpi-10.0.10.tgz -C /var/www/</span>
+```tar -xzvf glpi-10.0.10.tgz -C /var/www/```
     
 Définir l'utilisateur "www-data" correspondant à Appache2, en tant que propriétaire des fichiers GLPI
     
-<span style="color: red;">chown www-data /var/www/glpi/ -R</span>
+```chown www-data /var/www/glpi/ -R```
     
 Il faut créer pluisieurs dossiers et sortir des données de la racine Web (/var/www/glpi) de manière à les stocker dans les nouveaux dossiers que nous allons créer.
     
 Créer le répertoire "/etc/glpi" qui va recevoir les fichiers de configuration de GLPI.
     
-<span style="color: red;">mkdir /etc/glpi</span>
-<span style="color: red;">chown www-data /etc/glpi/</span>
+```mkdir /etc/glpi```
+```chown www-data /etc/glpi/```
     
 déplacer le répertoire "config" de GLPI vers ce nouveau dossier.
     
-<span style="color: red;">mv /var/www/glpi/config /etc/glpi</span>
+```mv /var/www/glpi/config /etc/glpi```
     
 répéter la même opération avec:
     
-<span style="color: red;">mkdir /var/lib/glpi</span>
-<span style="color: red;">chown www-data /var/lib/glpi/</span>
+```mkdir /var/lib/glpi```
+```chown www-data /var/lib/glpi/```
     
 Déplacer le dossier "files".
     
-<span style="color: red;">mv /var/www/glpi/files /var/lib/glpi</span>
+```mv /var/www/glpi/files /var/lib/glpi```
     
 terminer par créé le répertoire destiné à stocker les journaux de GLPI.
     
-<span style="color: red;">mkdir /var/log/glpi</span>
-<span style="color: red;">chown www-data /var/log/glpi</span>
+```mkdir /var/log/glpi```
+```chown www-data /var/log/glpi```
     
 Configurer GLPI pour qu'il sache où aller chercher les données.
     
 créer ce premier fichier.
     
-<span style="color: red;">nano /var/www/glpi/inc/downstream.php</span>
+```nano /var/www/glpi/inc/downstream.php```
     
 Ajouter le contenue ci dessous:
     
@@ -110,7 +110,7 @@ Ajouter le contenue ci dessous:
     
 Ensuite, créé ce second fichier
     
-<span style="color: red;">nano /etc/glpi/local_define.php</span>
+```nano /etc/glpi/local_define.php```
     
 Ajouter le contenue ci dessous :
     
@@ -121,7 +121,7 @@ Ajouter le contenue ci dessous :
     
 Il faut créer un nouveau fichier de configuration qui va permettre de configurer le VirtualHost dédié à GLPI.
     
-<span style="color: red;">nano /etc/apache2/sites-available/support.ekoloclast.fr.conf</span>
+```nano /etc/apache2/sites-available/support.ekoloclast.fr.conf```
     
 Ajouter :
     
@@ -129,36 +129,36 @@ Ajouter :
     
 Activer ce nouveau site dans Apache2.
     
-<span style="color: red;">a2ensite support.ekoloclast.fr.conf</span>
+```a2ensite support.ekoloclast.fr.conf```
     
 Désactiver le site par défault.
     
-<span style="color: red;">a2dissite 000-default.conf</span>
+```a2dissite 000-default.conf```
     
 Activer le module "rewrite".
     
-<span style="color: red;">a2enmod rewrite</span>
+```a2enmod rewrite```
     
 Redémarrer le servive Apache2.
     
-<span style="color: red;">systemctl restart apache2</span>
+```systemctl restart apache2```
     
     
 ## 5.Utilisation de PHP8.2-FPM avec Apache2
     
 Installer PHP8.2-FPM.
     
-<span style="color: red;">apt-get install php8.2-fpm</span>
+```apt-get install php8.2-fpm```
     
 Activer deux modules dans Apache et la configuration de PHP-FPM.
     
-<span style="color: red;">a2enmod proxy_fcgi setenvif</span>
-<span style="color: red;">a2enconf php8.2-fpm</span>
-<span style="color: red;">systemctl reload apache2</span>
+```a2enmod proxy_fcgi setenvif```
+```a2enconf php8.2-fpm```
+```systemctl reload apache2```
     
 configurer PHP-FPM pour Apache2.
     
-<span style="color: red;">/etc/php/8.2/fpm/php.ini</span>
+```/etc/php/8.2/fpm/php.ini```
     
 Dans ce fichier, rechercher l'option "session.cookie_httponly" et indiquer la valeur "on" :
     
@@ -166,11 +166,11 @@ Dans ce fichier, rechercher l'option "session.cookie_httponly" et indiquer la va
     
 Redémarrer le servive PHP-FPM.
     
-<span style="color: red;">systemctl restart php8.2-fpm.service</span>
+```systemctl restart php8.2-fpm.service```
     
 Modifier notre VirtualHost pour préciser à Apache2 que PHP-FPM doit être utilisé pour les fichiers PHP :
     
-<span style="color: red;">nano /etc/apache2/sites-available/support.ekoloclast.fr.conf</span>
+```/etc/apache2/sites-available/support.ekoloclast.fr.conf```
     
 ![](https://github.com/WildCodeSchool/TSSR-2402-P3-G3-BuildYourInfra-Ekoloclast/blob/main/Ressources%20Install%20et%20configuration%20GLPI/PHP_localhost.png)
     
@@ -180,7 +180,7 @@ Ce qui doit donner :
     
 Relancer Apache2
     
-<span style="color: red;">systemctl restart apache2</span>
+```systemctl restart apache2```
     
     
 ## 6.Installation de GLPI
@@ -207,4 +207,4 @@ Pour Changer le mot de passe par default en cliquant sur l'encadre orange.
     
 Supprimer le fichier "install.php".
     
-<span style="color: red;">rm /var/www/glpi/install/install.php</span>
+```rm /var/www/glpi/install/install.php```
