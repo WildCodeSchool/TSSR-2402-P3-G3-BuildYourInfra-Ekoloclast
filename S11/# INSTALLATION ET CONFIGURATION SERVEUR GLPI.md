@@ -36,6 +36,7 @@ Pour commencer il faut effectuer.
 Ici plusieurs option s'affiche pour une bonne configuration suivre l'exemple de l'image ci-dessous :
     
 ce qui doit donner :
+    
 ![](https://github.com/WildCodeSchool/TSSR-2402-P3-G3-BuildYourInfra-Ekoloclast/blob/main/Ressources%20Install%20et%20configuration%20GLPI/Securiser-MariaDB-pour-GLPI.png)
     
 Ensuite on se connecte à notre instance MariaDB.
