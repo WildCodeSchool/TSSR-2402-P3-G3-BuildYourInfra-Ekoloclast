@@ -26,10 +26,11 @@ Chaque collaborateur est équipé d'un ordinateur portable en WORKGOUP sous le p
 |   :---------: |  :-------: | :---------: |  :-------: | :-------: |  :-------:  |
 | 09 |  Analyse des besoins techniques - Choix Nomenclature et Plan IP| **PO** - Schema réseau | **SM** - Arborescence AD | Script fichier csv | Prépa VM et AD |
 | 10 |  Configuration AD DS | Script de création arborecense AD | Création et configuration Serveur Core Master - Edition du fichier README| **PO** - Script pour fichier CSV - Création poste client | **SM** - Création et configuration du Serveur maître en GUI - Edition du fichier Install.MD
-
+| 11 |   /   | Finalisation Script de création des OU et groupes | **PO** Installation et configuration Serveur GLPI - Documentation serveur GLPI | Installation et configuration serveur GLPI - Script automatisation de configuration serveur GLPI | Création des GPO - Documentation des GPO
 ## Difficultés rencontrées & Solutions trouvées
 
 |  Sprint  |  Problèmes  |  Solution  |
 | :-------:| :----------:| :---------:|
 |    09    |      /      |     /      |
 |    10    | Problème pour retiré les accents du fichier CSV | Solution trouvé sur le site IT-connect |           
+|    11    | Problèmes de versions GLPI apres supression de l'ancienne version | Recommencer l'installation du début |
