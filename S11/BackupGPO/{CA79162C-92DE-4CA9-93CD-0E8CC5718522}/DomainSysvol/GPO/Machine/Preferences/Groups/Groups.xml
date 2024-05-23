@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Groups clsid="{3125E937-EB16-4b4c-9934-544FC6D24D26}"><Group clsid="{6D4A79E4-529C-4481-ABD0-F5BD7EA93BA7}" name="Administrators" image="2" changed="2024-05-23 09:14:24" uid="{A14AA1B8-C955-4720-B714-B655B9C12488}"><Properties action="U" newName="" description="" deleteAllUsers="1" deleteAllGroups="1" removeAccounts="0" groupSid="" groupName="Administrators"><Members><Member name="EKOLOCLAST\Grp-Admins-PC" action="ADD" sid="S-1-5-21-3577228347-813851686-2838426286-1274"/></Members></Properties></Group>
+</Groups>
