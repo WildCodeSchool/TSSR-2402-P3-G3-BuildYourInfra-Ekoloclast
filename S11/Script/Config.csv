@@ -1,9 +1,0 @@
-Parametre,Valeur
-ServerName,EKO-CORE
-IpAddress,192.168.1.10
-SubnetMask,255.255.255.0
-Gateway,192.168.1.1
-DnsIpAddress,192.168.1.100
-DomainName,ekoloclast.fr
-DomainAdminUser,administrator@ekoloclast.fr
-DomainAdminPassword,Azerty1*
