@@ -3,12 +3,12 @@ $Path = "C:\Users\Administrator"
 $CsvFile = "$Path\Config.csv"
 
 # Import du fichier config
-$Users = Import-Csv -Path $CsvFile -Delimiter "," -Header "ServerName", "IPAddress", "SubnetMask", "Gateway", "DnsIpAddress", "DomainName", "DomainAdminUser", "DomainAdminPassword" -Encoding UTF8  | Select-Object -Skip 1
+$Param = Import-Csv -Path $CsvFile -Delimiter "," -Header "ServerName", "IPAddress", "SubnetMask", "Gateway", "DnsIpAddress", "DomainName", "DomainAdminUser", "DomainAdminPassword" -Encoding UTF8  | Select-Object -Skip 1
 
-foreach ($User in $Users) {
+foreach ($Config in $Param) {
 
     #variable du fichier
-    $ServerName = $Config.ServeurName
+    $ServerName = $Config.ServerName
     $IpAddress = $Config.IPAddress
     $SubnetMask = $Config.SubnetMask
     $Gateway = $Config.Gateway
@@ -32,14 +32,11 @@ Set-DnsClientServerAddress -InterfaceIndex $Interface -ServerAddresses $DnsIp
 #Installer le rôle AD-DS
 Install-WindowsFeature -Name AD-Domain-Services -IncludeManagementTools
 
-#objet credential
-$DomainCredential = New-Object System.Management.Automation.PSCredential($DomainAdmin, $DomainPassword)
+#ajout au domaine
+Add-Computer -DomainName $DomainName -Credential $DomainAdmin
 
-#ajout au omaine
-Add-Computer -DomainName $DomainName -Credential $DomainCredential
-
-
-    
+#Redémarrer le poste
+Restart-Computer -Force
 
 
 
