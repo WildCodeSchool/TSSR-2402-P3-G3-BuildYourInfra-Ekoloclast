@@ -1,0 +1,2 @@
+ServerName,IpAddress,SubnetMask,Gateway,DnsIpAddress,DomainName,DomainAdminUser,DomainAdminPassword,
+EKO-CORE-Test,192.168.0.10,255.255.255.0,192.168.0.254,192.168.0.2,ekololast.fr,Administrator,Azerty1*
