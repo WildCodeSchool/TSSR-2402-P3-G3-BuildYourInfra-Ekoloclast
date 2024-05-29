@@ -34,3 +34,16 @@ Chaque collaborateur est équipé d'un ordinateur portable en WORKGOUP sous le p
 |    09    |      /      |     /      |
 |    10    | Problème pour retiré les accents du fichier CSV | Solution trouvé sur le site IT-connect |           
 |    11    | Problèmes de versions GLPI apres supression de l'ancienne version | Recommencer l'installation du début |
+
+## Réseau :
+
+| Nom  | Fonction | Adresse IP |
+| ----- | ------ | -------|
+| EKO-MSTR | Serveur ADDS/DNS/DHCP | 192.168.0.2 |
+| EKO-CORE | Serveur DC | 192.168.0.3 |
+| DEBIAN-SSH| Serveur SSH |192.168.0.4 |
+| DEBIAN-GLPI | Serveur GLPI | 192.168.0.5 |
+| EKO-VyOSRouteur | Routeur | 192.168.0.253 |
+| pfsense | Firewall | 198.168.0.254 |
+
+
