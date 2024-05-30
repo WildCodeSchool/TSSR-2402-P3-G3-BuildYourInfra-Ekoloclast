@@ -88,7 +88,7 @@
   
 ## GPO pour désactiver le service d'experience utilisateur
   
-Dans ```Computer Configuration```
+- Dans ```Computer Configuration```
 - Aller dans Policies -> Administrative Templates -> Control Panel -> Regional and Language Options
 - Activer ```Restrict Language Pack ans Language Feature installation```
 - Aller dans Policies -> Administrative Templates -> Control Panel -> Regional and Language Options -> Handwriting personalization
