@@ -67,6 +67,31 @@ exit
 show nat source rule
 ```
 
+### Configurer le relai DHCP
+```bash
+set service dhcp-relay listen-interface eth0
+```
+```bash
+set service dhcp-relay upstream-interface eth1
+```
+```bash
+set service dhcp-relay server 192.168.0.2
+```
+```bash
+set service dhcp-relay relay-options relay-agents-packets discard
+```
+
+```bash
+show service dhcp-relay
+    listen-interface eth1
+    upstrem-interface eth2
+    server 192.168.0.2
+    relay-options {
+       relay-agents-packets discard
+    }
+```
+
+
 ### Plan réseau de Ekoloclast
 
 |Plage IP | Pôles | Effectifs |
