@@ -1,62 +1,73 @@
+
 #!/bin/bash
 
-# Variables de configuration
-DB_NAME="dbscript_glpi"
-DB_USER="toto"
-DB_PASS="toto1*"
-GLPI_VERSION="10.0.5"
-GLPI_URL="https://github.com/glpi-project/glpi/releases/download/${GLPI_VERSION}/glpi-${GLPI_VERSION}.tgz"
-SITE="support.ekoloclast.fr"
+#Fichier de configuration
+fichier_config="config.txt"
 
-# Mettre à jour le système
-apt-get update && apt-get upgrade -y
+#Sourcer le fichier de configuration
+source "$fichier_config"
 
-# Installer les dépendances nécessaires
-apt-get install -y apache2 mariadb-server php 
-apt-get php-xml php-common php-json php-mysql php-mbstring php-curl php-gd php-intl php-zip php-bz2 php-imap php-apcu
-apt-get install php-ldap
+#Utilisation des variables importées
+echo "Nom d'utilisateur: $db_user"
+echo "Mot de passe: $db_pass"
+echo "Nom de BDD: $db_name"
 
-# Configurer la base de données
-mysql -u root -p "CREATE DATABASE ${DB_NAME};"
-mysql -u root -p "CREATE USER '${DB_USER}'@'localhost' IDENTIFIED BY '${DB_PASS}';"
-mysql -u root -p "GRANT ALL PRIVILEGES ON ${DB_NAME}.* TO '${DB_USER}'@'localhost';"
-mysql -u root -p "FLUSH PRIVILEGES;"
-mysql -u root -p "EXIT"
+# Installation des paquets nécessaires
+apt update && apt upgrade -y
+apt install php-xml php-common php-json php-mysql php-mbstring php-curl php-gd php-intl php-zip php-bz2 php-imap php-apcu -y
+apt install apache2 php mariadb-server -y
+apt install php-ldap -y
 
-# Télécharger GLPI et préparer son installation
+# Sécurisation de l'installation MariaDB
+#mysql_secure_installation
+
+# Création de la base de données MySQL
+mysql -e "CREATE DATABASE $db_name"
+mysql -e "GRANT ALL PRIVILEGES ON $db_name.* TO $db_user@localhost IDENTIFIED BY $db_pass"
+mysql -e "FLUSH PRIVILEGES"
+
+# Télécharger et extraire GLPI
 cd /tmp
 wget https://github.com/glpi-project/glpi/releases/download/10.0.10/glpi-10.0.10.tgz
 tar -xzvf glpi-10.0.10.tgz -C /var/www/
+
+# Attribuer les permissions
 chown www-data /var/www/glpi/ -R
+
+# Création des dossiers nécessaires
 mkdir /etc/glpi
 chown www-data /etc/glpi/
 mv /var/www/glpi/config /etc/glpi
+
 mkdir /var/lib/glpi
 chown www-data /var/lib/glpi/
 mv /var/www/glpi/files /var/lib/glpi
+
 mkdir /var/log/glpi
 chown www-data /var/log/glpi
 
-# Créer le fichier de configuration de la base de données pour GLPI
-echo "<?php
-define('GLPI_VAR_DIR', '/var/lib/glpi/files');
-define('GLPI_LOG_DIR', '/var/log/glpi');"  > /etc/glpi/local_define.php
-echo "<?php
+# Création des fichiers de configuration PHP
+touch /var/www/glpi/inc/downstream.php
+cat > /var/www/glpi/inc/downstream.php <<EOF
+<?php
 define('GLPI_CONFIG_DIR', '/etc/glpi/');
 if (file_exists(GLPI_CONFIG_DIR . '/local_define.php')) {
     require_once GLPI_CONFIG_DIR . '/local_define.php';
-}" > /var/www/glpi/inc/downstream.php
+}
+EOF
 
-# Utilisation de PHP8.2-FPM avec Apache2
-apt-get install php8.2-fpm
-a2enmod proxy_fcgi setenvif
-a2enconf php8.2-fpm
-systemctl reload apache2
-sed -i 's/\(session.cookie_httponly\).*'/\session.cookie_httponly = on/' /etc/php/8.2/fpm/php.ini'
-systemctl restart php8.2-fpm.service
-# Préparer la configuration Apache2
-echo "<VirtualHost *:80>
-    ServerName $SITE
+touch /etc/glpi/local_define.php
+cat > /etc/glpi/local_define.php <<EOF
+<?php
+define('GLPI_VAR_DIR', '/var/lib/glpi/files');
+define('GLPI_LOG_DIR', '/var/log/glpi');
+EOF
+
+# Configuration Apache2 pour GLPI
+touch /etc/apache2/sites-available/support.pharmgreen.org.conf
+cat > /etc/apache2/sites-available/support.pharmgreen.org.conf <<EOF
+<VirtualHost *:80>
+    ServerName pharmgreen.org
 
     DocumentRoot /var/www/glpi/public
 
@@ -67,16 +78,28 @@ echo "<VirtualHost *:80>
 
         RewriteCond %{REQUEST_FILENAME} !-f
         RewriteRule ^(.*)$ index.php [QSA,L]
-
     </Directory>
-
     <FilesMatch \.php$>
-    SetHandler " proxy:unix:/run/php/php8.2-fpm.sock|fcgi://localhost/ "
+        SetHandler "proxy:unix:/run/php/php8.2-fpm.sock|fcgi://localhost/"
     </FilesMatch>
+</VirtualHost>
+EOF
 
-</VirtualHost>" > /etc/apache2/sites-available/$SITE.conf
+# Activer le site GLPI et modules Apache
+a2ensite support.pharmgreen.org
+a2dissite 000-default.conf
+a2enmod rewrite
 
+# Redémarrer Apache
 systemctl restart apache2
 
+# Installation et configuration de PHP-FPM
+apt-get install php8.2-fpm -y
+sudo a2enmod proxy_fcgi setenvif
+sudo a2enconf php8.2-fpm
+sudo systemctl reload apache2
+sed -i 's/^\(session\.cookie_httponly\s*=\s*\).*/\1on/' /etc/php/8.2/fpm/php.ini
 
-
+# Redémarrer PHP-FPM et Apache
+systemctl restart php8.2-fpm.service
+sudo systemctl restart apache2
