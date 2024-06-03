@@ -57,3 +57,8 @@ Pour la "Destination" on regle sur `Tous` ou `Any` et on viens ajouter notre Ali
 Puis il reste a faire `Enregistrer` en bas de page, et `Appliquer les modifications` une fois revenu sur le résumé des regles.
 
 
+## Annexe
+
+Site qui m'a permi de trouver les reglages de base pour la configuration
+
+https://docs.netgate.com/pfsense/en/latest/recipes/example-basic-configuration.html
