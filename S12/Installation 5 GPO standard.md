@@ -57,7 +57,7 @@ Sur le serveur EKO-MSTR
  - Type de fichier : ``Paquet``
  - Télécharger
 
-Copier les fichiers ADMX sur le serveur AD dans ``C:\PolicyDefinitions`` et copier les fichiers AML dans le dossier ``C:\PolicyDefinitions\en-US``
+Copier les fichiers ADMX sur le serveur AD dans ``C:\PolicyDefinitions`` et copier les fichiers ADML dans le dossier ``C:\PolicyDefinitions\en-US``
 
 ![policies](https://github.com/WildCodeSchool/TSSR-2402-P3-G3-BuildYourInfra-Ekoloclast/blob/main/S12/Ressources%20GPO%20Telemetrie/policies.PNG?raw=true)
 
