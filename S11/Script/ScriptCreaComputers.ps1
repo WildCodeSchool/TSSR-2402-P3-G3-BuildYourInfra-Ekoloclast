@@ -1,4 +1,8 @@
-
+######################################################
+#                                                    #
+#  Script Pour création automatique des ordinateurs  #
+#                                                    #
+######################################################
 
 # Chemin vers le fichier CSV
 $csvPath = "C:\Users\Administrator\ScriptAD\s09_Ekoloclast.csv"
@@ -37,7 +41,6 @@ foreach ($computer in $computers) {
                     -Path $targetOU `
                     -DNSHostName ekoloclast.fr `
                     -PassThru
-                   
 
                 Write-host "Ordinateur $computerName créé dans $targetOU avec succès." -ForegroundColor Green
             }
