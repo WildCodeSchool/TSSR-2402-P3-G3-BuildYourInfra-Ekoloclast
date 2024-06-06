@@ -1,6 +1,6 @@
-$users = Import-Csv -Path "C:\Users\Administrator\Documents\Utilisateur.csv" | Select-Object -Skip 1
+$users = Get-ADUser -filter * | Select-object SamAccountName -Skip 1
 
 foreach ($user in $users) {
-    $username = $user.Name  
-    net user $username /times:M-F,7:30AM-8:00PM
+    $username = $user.SamAccountName  
+    net user $username /times:M-Sa,7:00-20:00
 }
