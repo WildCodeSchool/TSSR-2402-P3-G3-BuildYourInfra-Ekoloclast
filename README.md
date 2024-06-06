@@ -27,6 +27,9 @@ Chaque collaborateur est équipé d'un ordinateur portable en WORKGOUP sous le p
 | 09 |  Analyse des besoins techniques - Choix Nomenclature et Plan IP| **PO** - Schema réseau | **SM** - Arborescence AD | Script fichier csv | Prépa VM et AD |
 | 10 |  Configuration AD DS | Script de création arborecense AD | Création et configuration Serveur Core Master - Edition du fichier README| **PO** - Script pour fichier CSV - Création poste client | **SM** - Création et configuration du Serveur maître en GUI - Edition du fichier Install.MD
 | 11 |   /   | Finalisation Script de création des OU/groupes et Ajout des utilisateurs | **PO** Installation et configuration Serveur GLPI - Documentation serveur GLPI | Installation et configuration serveur GLPI - Script automatisation de configuration serveur GLPI | **SM** Création des GPO - Documentation des GPO
+| 12 |   /   | **PO** - Configuration du pare-feu Pfsense - mise en place de règle | **SM** - Création et documentation des GPO de gestion de télémétrie | Finition GLPI + Doc - Support sur les autres tâches |  Installation et configuration du routeur VYOS - Documentation |
+| 13 |  Mappage des lecteurs   | **SM** - Mise en place des dossiers partagés | Mise en place sauvegarde de volume| Mise en place restriction d'utilisation des machines (plage horaire) | **PO** Mise en place de LAPS |
+
 ## Difficultés rencontrées & Solutions trouvées
 
 |  Sprint  |  Problèmes  |  Solution  |
@@ -34,6 +37,9 @@ Chaque collaborateur est équipé d'un ordinateur portable en WORKGOUP sous le p
 |    09    |      /      |     /      |
 |    10    | Problème pour retiré les accents du fichier CSV | Solution trouvé sur le site IT-connect |           
 |    11    | Problèmes de versions GLPI apres supression de l'ancienne version | Recommencer l'installation du début |
+|    12    | Problème avec le DHCP superscope | En attendant la résolution, les adresses IP des postes clients sont renseignés manuellement |
+|    13    | Accès à Proxmox non optimal | Une partie des objectifs ont été réalisés sur Virtualbox |
+
 
 ## Réseau :
 
