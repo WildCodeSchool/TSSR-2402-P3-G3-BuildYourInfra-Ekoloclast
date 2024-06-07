@@ -38,7 +38,7 @@ Chaque collaborateur est équipé d'un ordinateur portable en WORKGOUP sous le p
 |    10    | Problème pour retiré les accents du fichier CSV | Solution trouvé sur le site IT-connect |           
 |    11    | Problèmes de versions GLPI apres supression de l'ancienne version | Recommencer l'installation du début |
 |    12    | Problème avec le DHCP superscope | En attendant la résolution, les adresses IP des postes clients sont renseignés manuellement |
-|    13    | Accès à Proxmox non optimal | Une partie des objectifs ont été réalisés sur Virtualbox |
+|    13    | Accès à Proxmox non optimal  - Problème dans l'installation  de bareOS | Une partie des objectifs ont été réalisés sur Virtualbox - Aucune pour l'instant|
 
 
 ## Réseau :
