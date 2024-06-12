@@ -25,7 +25,7 @@ Chaque collaborateur est équipé d'un ordinateur portable en WORKGOUP sous le p
 | Sprint  |  Team   | Nicolas | Luca | Patrick | Grégory |
 |   :---------: |  :-------: | :---------: |  :-------: | :-------: |  :-------:  |
 | 09 |  Analyse des besoins techniques - Choix Nomenclature et Plan IP| **PO** - Schema réseau | **SM** - Arborescence AD | Script fichier csv | Prépa VM et AD |
-| 10 |  Configuration AD DS | Script de création arborecense AD | Création et configuration Serveur Core Master - Edition du fichier README| **PO** - Script pour fichier CSV - Création poste client | **SM** - Création et configuration du Serveur maître en GUI - Edition du fichier Install.MD
+| 10 |  Configuration AD DS | Sript de création arborecense AD | Création et configuration Serveur Core Master - Edition du fichier README| **PO** - Script pour fichier CSV - Création poste client | **SM** - Création et configuration du Serveur maître en GUI - Edition du fichier Install.MD
 | 11 |   /   | Finalisation Script de création des OU/groupes et Ajout des utilisateurs | **PO** Installation et configuration Serveur GLPI - Documentation serveur GLPI | Installation et configuration serveur GLPI - Script automatisation de configuration serveur GLPI | **SM** Création des GPO - Documentation des GPO
 | 12 |   /   | **PO** - Configuration du pare-feu Pfsense - mise en place de règle | **SM** - Création et documentation des GPO de gestion de télémétrie | Finition GLPI + Doc - Support sur les autres tâches |  Installation et configuration du routeur VYOS - Documentation |
 | 13 |  Mappage des lecteurs   | **SM** - Mise en place des dossiers partagés | Mise en place sauvegarde de volume| Mise en place restriction d'utilisation des machines (plage horaire) | **PO** Mise en place de LAPS |
@@ -49,6 +49,7 @@ Chaque collaborateur est équipé d'un ordinateur portable en WORKGOUP sous le p
 | EKO-CORE | Serveur DC | 192.168.0.3 |
 | DEBIAN-SSH| Serveur SSH |192.168.0.4 |
 | DEBIAN-GLPI | Serveur GLPI | 192.168.0.5 |
+| PRGT | Serveur Supervision | 192.168.0.6 |
 | EKO-VyOSRouteur | Routeur | 192.168.0.253 |
 | pfsense | Firewall | 198.168.0.254 |
 
