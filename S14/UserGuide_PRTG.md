@@ -30,3 +30,4 @@ Dans la zone Autorisations pour<groupe ou utilisateur>, sélectionnez la colonne
 ![image](https://github.com/WildCodeSchool/TSSR-2402-P3-G3-BuildYourInfra-Ekoloclast/assets/161337347/71589ae3-a002-4a37-933d-a967ac5f3b09)
 ![image](https://github.com/WildCodeSchool/TSSR-2402-P3-G3-BuildYourInfra-Ekoloclast/assets/161337347/a722d062-95ef-4b2f-ad5a-2a60409108fd)
 ![image](https://github.com/WildCodeSchool/TSSR-2402-P3-G3-BuildYourInfra-Ekoloclast/assets/161337347/03c75016-7476-4f87-bbce-c44d44131b67)
+![image](https://github.com/WildCodeSchool/TSSR-2402-P3-G3-BuildYourInfra-Ekoloclast/assets/161337347/22b9f80b-20a8-43c5-ad1f-4f952c609c21)
