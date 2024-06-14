@@ -79,7 +79,6 @@ foreach ($computer in $computers) {
                     -DNSHostName ekoloclast.fr `
                     -PassThru
                 $logMessage = "Ordinateur $computeurName créé dans $targetOU"
-                $modificationsList += $logMessage
                 Log-Execution -scriptName "ScriptCreaComputers.ps1" -modification $logMessage
                 Write-host $logMessage -ForegroundColor Green
             }
