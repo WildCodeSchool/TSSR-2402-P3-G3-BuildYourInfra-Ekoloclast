@@ -24,8 +24,7 @@ function Log-Execution {
         [string]$modifications,
         [string]$logDirectory = "C:\PowerShellLogs"
     )
-
-    Write-Log -scriptName $scriptName -message "Script exécuté: $scriptName" -logDirectory $logDirectory
+    
     Write-Log -scriptName $scriptName -message "Modifications: $modifications" -logDirectory $logDirectory
 
     # Enregistrement dans l'Observateur d'événements Windows
