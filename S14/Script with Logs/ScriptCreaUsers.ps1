@@ -25,7 +25,6 @@ function Log-Execution {
         [string]$logDirectory = "C:\PowerShellLogs"
     )
 
-    Write-Log -scriptName $scriptName -message "Script exécuté: $scriptName" -logDirectory $logDirectory
     Write-Log -scriptName $scriptName -message "Modifications: $modifications" -logDirectory $logDirectory
 
     # Enregistrement dans l'Observateur d'événements Windows
@@ -34,7 +33,7 @@ function Log-Execution {
         New-EventLog -LogName Application -Source $eventSource
     }
 
-    Write-EventLog -LogName Application -Source $eventSource -EventId 1 -EntryType Information -Message "Script exécuté: $scriptName - Modifications: $modifications"
+    Write-EventLog -LogName Application -Source $eventSource -EventId 1 -EntryType Information -Message "Script exécuté : $scriptName - Modifications : $modifications"
 }
 
 # Importer le module Active Directory
@@ -115,7 +114,6 @@ foreach ($user in $users) {
                     -Description "non" `
                     -EmailAddress $mail 
                 $logMessage = "Utilisateur $displayName cree avec succes."
-                $modificationsList =+ $logMessage
                 Log-Execution -scriptName "ScriptCreaUsers.ps1" -modification $logMessage
                 Write-host $logMessage -ForegroundColor green
             }
@@ -149,7 +147,6 @@ foreach ($user in $users) {
                     -EmailAddress $mail 
 
                 $logMessage = "Utilisateur $displayName cree avec succes."
-                $modificationsList =+ $logMessage
                 Log-Execution -scriptName "ScriptCreaUsers.ps1" -modification $logMessage
                 Write-host $logMessage -ForegroundColor green
             }
@@ -169,7 +166,6 @@ foreach ($user in $users) {
             try {
                 Add-ADGroupMember -Identity $group -Members $samAccountName
                 $logMessage = "Utilisateur $displayName ajoute au groupe $group."
-                $modificationsList =+ $logMessage
                 Log-Execution -scriptName "ScriptCreaUsers.ps1" -modification $logMessage
                 Write-host $logMessage -ForegroundColor Yellow
             }
