@@ -29,8 +29,7 @@ function Log-Execution {
         [string]$modifications,
         [string]$logDirectory = "C:\PowerShellLogs"
     )
-
-    Write-Log -scriptName $scriptName -message "Script exécuté: $scriptName" -logDirectory $logDirectory
+    
     Write-Log -scriptName $scriptName -message "Modifications: $modifications" -logDirectory $logDirectory
 
     # Enregistrement dans l'Observateur d'événements Windows
@@ -39,7 +38,7 @@ function Log-Execution {
         New-EventLog -LogName Application -Source $eventSource
     }
 
-    Write-EventLog -LogName Application -Source $eventSource -EventId 1 -EntryType Information -Message "Script exécuté: $scriptName - Modifications: $modifications"
+    Write-EventLog -LogName Application -Source $eventSource -EventId 1 -EntryType Information -Message "Script exécuté : $scriptName - Modifications : $modifications"
 }
 
 
@@ -110,7 +109,6 @@ foreach ($ligne in $data) {
                         # Créer le groupe dans l'OU spécifiée
                         New-ADGroup -Name $fonctionModif -Path $grpPath -GroupScope Global -GroupCategory Security
                         $logMessage = "Le groupe $fonctionModif a été créé avec succes dans l'OU $grpPath"
-                        $modificationsList += $logMessage
                         Log-Execution -scriptName "ScriptCreaOUetGRPauto.ps1" -modification $logMessage
                         Write-Host $logMessage -ForegroundColor Green
                     }
@@ -140,7 +138,6 @@ foreach ($ligne in $data) {
                         # Créer le groupe dans l'OU spécifiée
                         New-ADGroup -Name $fonctionModif -Path $ouPath -GroupScope Global -GroupCategory Security
                         $logMessage = "Le groupe $fonctionModif a été créé avec succes dans l'OU $ouPath"
-                        $modificationsList += $logMessage
                         Log-Execution -scriptName "ScriptCreaOUetGRPauto.ps1" -modification $logMessage
                         Write-Host $logMessage -ForegroundColor Green
                     }
