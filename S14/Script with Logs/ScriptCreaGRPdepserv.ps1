@@ -33,7 +33,7 @@ function Log-Execution {
         New-EventLog -LogName Application -Source $eventSource
     }
 
-    Write-EventLog -LogName Application -Source $eventSource -EventId 1 -EntryType Information -Message "Script exécuté: $scriptName - Modifications: $modifications"
+    Write-EventLog -LogName Application -Source $eventSource -EventId 1 -EntryType Information -Message "Script exécuté : $scriptName - Modifications : $modifications"
 }
 
 # Import-Module Active Directory module
