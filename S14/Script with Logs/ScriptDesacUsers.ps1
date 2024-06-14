@@ -25,7 +25,6 @@ function Log-Execution {
         [string]$logDirectory = "C:\PowerShellLogs"
     )
 
-    Write-Log -scriptName $scriptName -message "Script exécuté: $scriptName" -logDirectory $logDirectory
     Write-Log -scriptName $scriptName -message "Modifications: $modifications" -logDirectory $logDirectory
 
     # Enregistrement dans l'Observateur d'événements Windows
@@ -34,7 +33,7 @@ function Log-Execution {
         New-EventLog -LogName Application -Source $eventSource
     }
 
-    Write-EventLog -LogName Application -Source $eventSource -EventId 1 -EntryType Information -Message "Script exécuté: $scriptName - Modifications: $modifications"
+    Write-EventLog -LogName Application -Source $eventSource -EventId 1 -EntryType Information -Message "Script exécuté : $scriptName - Modifications : $modifications"
 }
 
 # Demande les noms des utilisateurs à désactiver
@@ -54,7 +53,6 @@ foreach ($username in $usernames) {
     
     if ($desacverif.Enabled -eq $false) {
         $logMessage = "L'utilisateur $username est désactivé."
-        $modificationsList += $logMessage
         Log-Execution -scriptName "ScriptDesacUsers.ps1" -modification $logMessage
         Write-Host $logMessage
     } else {
