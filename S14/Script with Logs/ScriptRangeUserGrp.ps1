@@ -26,8 +26,7 @@ function Log-Execution {
         [string]$modifications,
         [string]$logDirectory = "C:\PowerShellLogs"
     )
-
-    Write-Log -scriptName $scriptName -message "Script exécuté: $scriptName" -logDirectory $logDirectory
+    
     Write-Log -scriptName $scriptName -message "Modifications: $modifications" -logDirectory $logDirectory
 
     # Enregistrement dans l'Observateur d'événements Windows
@@ -67,7 +66,6 @@ foreach ($user in $users) {
             try {
                 Add-ADGroupMember -Identity $group -Members $samAccountName
                 $logMessage = "Utilisateur $displayName ajouté au groupe $group."
-                $modificationsList += $logMessage
                 Log-Execution -scriptName "ScriptRangeUserGrp.ps1" -modification $logMessage
                 Write-Host $logMessage -ForegroundColor Yellow
             } catch {
@@ -84,7 +82,6 @@ foreach ($user in $users) {
                 try {
                     Add-ADGroupMember -Identity $group -Members $samAccountName
                     $logMessage = "Utilisateur $displayName ajouté au groupe $group."
-                    $modificationsList += $logMessage
                     Log-Execution -scriptName "ScriptRangeUserGrp.ps1" -modification $logMessage
                     Write-Host $logMessage -ForegroundColor Yellow
                 } catch {
@@ -100,7 +97,3 @@ foreach ($user in $users) {
         }
     }
 }
-
-# Enregistrer l'exécution finale du script avec les détails des modifications
-$modificationsSummary = $modificationsList -join "; "
-Log-Execution -scriptName "ScriptRangeUserGrp.ps1" -modifications $modificationsSummary
