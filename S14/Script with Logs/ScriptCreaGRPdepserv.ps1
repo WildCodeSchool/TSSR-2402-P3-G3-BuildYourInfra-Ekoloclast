@@ -65,7 +65,6 @@ foreach ($user in $users) {
     if (-not (Get-ADGroup -Filter "Name -eq '$groupDepartment'")) {
         New-ADGroup -Name $groupDepartment -Path $ouDN -GroupScope Global -GroupCategory Security
         $logMessage = "Le groupe $groupDepartment a été créé avec succes dans l'OU $ouDN"
-        $modificationsList += $logMessage
         Log-Execution -scriptName "ScriptCreaGRPdepserv.ps1" -modification $logMessage
         Write-Host $logMessage -ForegroundColor Green
     }
@@ -74,7 +73,6 @@ foreach ($user in $users) {
         if ($service -and -not (Get-ADGroup -Filter "Name -eq '$groupService'")) {
             New-ADGroup -Name $groupService -Path $subOuDN -GroupScope Global -GroupCategory Security
             $logMessage = "Le groupe $groupService a été créé avec succes dans l'OU $subOuDN"
-            $modificationsList += $logMessage
             Log-Execution -scriptName "ScriptCreaGRPdepserv.ps1" -modification $logMessage
             Write-Host $logMessage -ForegroundColor Green
         }
