@@ -49,7 +49,8 @@ Chaque collaborateur est équipé d'un ordinateur portable en WORKGOUP sous le p
 | EKO-CORE | Serveur DC | 192.168.0.3 |
 | DEBIAN-SSH| Serveur SSH |192.168.0.4 |
 | DEBIAN-GLPI | Serveur GLPI | 192.168.0.5 |
-| PRGT | Serveur Supervision | 192.168.0.6 |
+| PRTG | Serveur Supervision | 192.168.0.6 |
+| EKO-RDS-WDS | Serveur RDS/WDS | 192.168.0.7 |
 | EKO-ZIMBRA | Serveur Messagerie | 192.168.0.8 |
 | EKO-VyOSRouteur | Routeur | 192.168.0.253 |
 | pfsense | Firewall | 198.168.0.254 |
