@@ -29,6 +29,9 @@ Chaque collaborateur est équipé d'un ordinateur portable en WORKGOUP sous le p
 | 11 |   /   | Finalisation Script de création des OU/groupes et Ajout des utilisateurs | **PO** Installation et configuration Serveur GLPI - Documentation serveur GLPI | Installation et configuration serveur GLPI - Script automatisation de configuration serveur GLPI | **SM** Création des GPO - Documentation des GPO
 | 12 |   /   | **PO** - Configuration du pare-feu Pfsense - mise en place de règle | **SM** - Création et documentation des GPO de gestion de télémétrie | Finition GLPI + Doc - Support sur les autres tâches |  Installation et configuration du routeur VYOS - Documentation |
 | 13 |  Mappage des lecteurs   | **SM** - Mise en place des dossiers partagés | Mise en place sauvegarde de volume| Mise en place restriction d'utilisation des machines (plage horaire) | **PO** Mise en place de LAPS |
+| 14 |  / | **SM** - Mise en place de PRTG pour la supervision, Déplacement machines dans l’AD | Mise en place des logs et mise à jour des scripts | **PO** - Gestion AD : Modification, Ajout | Mise en place du raid & création du serveur RDS |
+| 15 |  / | **PO** - Mise en place de Zimbra pour la messagerie | Mise en place du logiciel Bitwarden | **SM** - Mise en place de Redmine pour le suivi du projet | Mise en place du logiciel Bitwarden + WDS |
+
 
 ## Difficultés rencontrées & Solutions trouvées
 
