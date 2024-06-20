@@ -199,7 +199,7 @@ ce qui doit donner :
     
 ![](https://github.com/WildCodeSchool/TSSR-2402-P3-G3-BuildYourInfra-Ekoloclast/blob/main/S11/Ressources%20Install%20et%20configuration%20GLPI/Installation-de-GLPI-Etape-5.png)
     
-- Continuer j'usque à cette page et se connecter avec le compte "glpi" et le mot de passe "glpi" :
+- Continuer jusqu'a à cette page et se connecter avec le compte "glpi" et le mot de passe "glpi" :
     
 ![](https://github.com/WildCodeSchool/TSSR-2402-P3-G3-BuildYourInfra-Ekoloclast/blob/main/S11/Ressources%20Install%20et%20configuration%20GLPI/Installation-de-GLPI-Etape-9.png)
     
