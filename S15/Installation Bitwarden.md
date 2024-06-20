@@ -3,7 +3,7 @@
 **Prérequis**
 
 Machine : VM DEBIAN-SSH (Debian 12)
-IP : 192.168.0.7
+IP : 192.168.0.4
 
 ### 1. Installation Docker à l'aide du apt référentiel
 
