@@ -1,5 +1,8 @@
 ## 1-routeurVyos-priseEnMain
 
+VyOS login : vyos
+Password : vyos
+
 - Configuration basique :
 
 ```bash
