@@ -1,11 +1,15 @@
 ## 1-routeurVyos-priseEnMain
 
+**Matériel**
+- Ajouter carte réseau VMBR8 et VMBR301
+
 VyOS login : vyos
 Password : vyos
 
 - Configuration basique :
 
 ```bash
+#passer en mode configuration
 config
 set system host-name VyosRouteur
 set system domain-name ekoloclast.fr
@@ -57,7 +61,7 @@ save
 - Pour le réseau LAN COMMUNICATION
 ```bash
 set nat source rule 10 description 'NAT from 192.168.1.0/24 to internet'
-set nat source rule 10 outbound-interface eth0
+set nat source rule 10 outbound-interface eth0 (#non obligatoire)
 set nat source rule 10 source address 192.168.1.0/24
 set nat source rule 10 translation address masquerade
 ```
@@ -72,6 +76,7 @@ show nat source rule
 
 ### Configurer le relai DHCP
 ```bash
+config
 set service dhcp-relay listen-interface eth0
 ```
 ```bash
@@ -86,8 +91,8 @@ set service dhcp-relay relay-options relay-agents-packets discard
 
 ```bash
 show service dhcp-relay
-    listen-interface eth1
-    upstrem-interface eth2
+    listen-interface eth0
+    upstrem-interface eth1
     server 192.168.0.2
     relay-options {
        relay-agents-packets discard
