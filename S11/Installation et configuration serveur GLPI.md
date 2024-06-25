@@ -67,7 +67,7 @@ ce qui doit donner :
     
 - Il faut ensuite decomprésser l'archive .tgz dans le dossier /var/www .
     
-```tar -xzvf glpi-10.0.10.tgz -C /var/www/```
+```tar -xzvf glpi-10.0.15.tgz -C /var/www/```
     
 - Définir l'utilisateur "www-data" correspondant à Appache2, en tant que propriétaire des fichiers GLPI
     
