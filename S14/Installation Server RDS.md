@@ -1,4 +1,4 @@
-## Installation Windows Server RDS et WDS
+## Installation Windows Server RDS 
 
 ### A. Prérequis
 
