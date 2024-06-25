@@ -64,10 +64,10 @@ define('GLPI_LOG_DIR', '/var/log/glpi');
 EOF
 
 # Configuration Apache2 pour GLPI
-touch /etc/apache2/sites-available/support.pharmgreen.org.conf
-cat > /etc/apache2/sites-available/support.pharmgreen.org.conf <<EOF
+touch /etc/apache2/sites-available/support.ekoloclast.org.conf
+cat > /etc/apache2/sites-available/support.ekoloclast.org.conf <<EOF
 <VirtualHost *:80>
-    ServerName pharmgreen.org
+    ServerName support.ekolocalst.org
 
     DocumentRoot /var/www/glpi/public
 
