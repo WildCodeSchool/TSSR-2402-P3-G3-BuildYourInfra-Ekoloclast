@@ -172,8 +172,6 @@ ce qui doit donner :
     
 ```/etc/apache2/sites-available/support.ekoloclast.fr.conf```
     
-![](https://github.com/WildCodeSchool/TSSR-2402-P3-G3-BuildYourInfra-Ekoloclast/blob/main/S11/Ressources%20Install%20et%20configuration%20GLPI/Cookie.png)
-    
 - Ce qui doit donner :
     
 ![](https://github.com/WildCodeSchool/TSSR-2402-P3-G3-BuildYourInfra-Ekoloclast/blob/main/S11/Ressources%20Install%20et%20configuration%20GLPI/Apache2-et-PHP-FPM-Exemple.png)
