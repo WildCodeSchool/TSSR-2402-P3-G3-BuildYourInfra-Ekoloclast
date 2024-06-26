@@ -136,17 +136,9 @@ define('GLPI_LOG_DIR', '/var/log/glpi');
     ServerName support.ekoloclast.fr
 
     DocumentRoot /var/www/glpi/public
-
-    # If you want to place GLPI in a subfolder of your site (e.g. your virtual host is serving multiple applications),
-    # you can use an Alias directive. If you do this, the DocumentRoot directive MUST NOT target the GLPI directory itself.
-    # Alias "/glpi" "/var/www/glpi/public"
-
     <Directory /var/www/glpi/public>
         Require all granted
-
         RewriteEngine On
-
-        # Redirect all requests to GLPI router, unless file exists.
         RewriteCond %{REQUEST_FILENAME} !-f
         RewriteRule ^(.*)$ index.php [QSA,L]
     </Directory>
