@@ -1,4 +1,9 @@
 ```
+CREATE DATABASE db23_glpi;
+GRANT ALL PRIVILEGES ON db23_glpi.* TO glpi_adm@localhost IDENTIFIED BY "Azerty1*";
+FLUSH PRIVILEGES;
+EXIT
+
 <?php
 define('GLPI_CONFIG_DIR', '/etc/glpi/');  
 if (file_exists(GLPI_CONFIG_DIR . '/local_define.php')) { 
