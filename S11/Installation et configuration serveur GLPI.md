@@ -105,12 +105,7 @@ ce qui doit donner :
 ```nano /var/www/glpi/inc/downstream.php```
     
 - Ajouter le contenue ci dessous:
-- <?php
-define('GLPI_CONFIG_DIR', '/etc/glpi/');
-if (file_exists(GLPI_CONFIG_DIR . '/local_define.php')) {
-    require_once GLPI_CONFIG_DIR . '/local_define.php';
-}
-    
+
 ![](https://github.com/WildCodeSchool/TSSR-2402-P3-G3-BuildYourInfra-Ekoloclast/blob/main/S11/Ressources%20Install%20et%20configuration%20GLPI/Capture%20d%E2%80%99e%CC%81cran%202024-05-23%20a%CC%80%2013.36.26.png)
     
 - Ensuite, créé ce second fichier
@@ -118,10 +113,7 @@ if (file_exists(GLPI_CONFIG_DIR . '/local_define.php')) {
 ```nano /etc/glpi/local_define.php```
     
 - Ajouter le contenue ci dessous :
-- <?php
-define('GLPI_VAR_DIR', '/var/lib/glpi/files');
-define('GLPI_LOG_DIR', '/var/log/glpi');
-    
+
 ![](https://github.com/WildCodeSchool/TSSR-2402-P3-G3-BuildYourInfra-Ekoloclast/blob/main/S11/Ressources%20Install%20et%20configuration%20GLPI/Fichier_php2.png)
     
     
@@ -132,17 +124,6 @@ define('GLPI_LOG_DIR', '/var/log/glpi');
 ```nano /etc/apache2/sites-available/support.ekoloclast.fr.conf```
     
 - Ajouter :
-- <VirtualHost *:80>
-    ServerName support.ekoloclast.fr
-
-    DocumentRoot /var/www/glpi/public
-    <Directory /var/www/glpi/public>
-        Require all granted
-        RewriteEngine On
-        RewriteCond %{REQUEST_FILENAME} !-f
-        RewriteRule ^(.*)$ index.php [QSA,L]
-    </Directory>
-</VirtualHost>
     
 ![](https://github.com/WildCodeSchool/TSSR-2402-P3-G3-BuildYourInfra-Ekoloclast/blob/main/S11/Ressources%20Install%20et%20configuration%20GLPI/Edition_fichier_virtualhost.png)
     
