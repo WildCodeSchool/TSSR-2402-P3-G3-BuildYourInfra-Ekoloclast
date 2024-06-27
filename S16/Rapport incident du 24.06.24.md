@@ -66,7 +66,7 @@ Iniatelement l'application GLPI était hébergée sur une VM debian, suite à l'
 
 |   Serveur |  Etat | Actions réalisées| Paramètre ajouté |
 |   :---------: |  :-------: | :---------: | :---------: |
-| GLPI |  <font color='red'>HS</font> | Mise en place dans un conteneur | Intégration des adresses email des utilisateurs dans LDAP  |
+| GLPI |  <font color='red'>HS</font> | Mise en place dans un conteneur ([Install GLPI](https://github.com/WildCodeSchool/TSSR-2402-P3-G3-BuildYourInfra-Ekoloclast/blob/main/S11/Installation%20et%20configuration%20serveur%20GLPI.md)) | Intégration des adresses email des utilisateurs dans LDAP  |
 
 _Réalisé le 26/06/24_
 
