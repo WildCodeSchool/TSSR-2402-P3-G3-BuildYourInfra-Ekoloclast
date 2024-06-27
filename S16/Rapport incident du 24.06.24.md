@@ -62,7 +62,7 @@ _Réalisé le 26/06/24_
 
 _Réalisé le 26/06/24_
 
-Iniatelement l'application GLPI était hébergée sur une VM debian, suite à l'incident la VM st complétment HS. Afin d'alléger notre infrastructure nous avons décidé d'installer GLPI dans un conteneur dédié.
+Iniatelement l'application GLPI était hébergée sur une VM debian, suite à l'incident la VM est complétment HS. Afin d'alléger notre infrastructure nous avons décidé d'installer GLPI dans un conteneur dédié.
 
 |   Serveur |  Etat | Actions réalisées| Paramètre ajouté |
 |   :---------: |  :-------: | :---------: | :---------: |
