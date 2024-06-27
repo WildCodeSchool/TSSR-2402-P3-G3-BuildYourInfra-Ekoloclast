@@ -1,4 +1,4 @@
-# ==Rapport incident survenu le 24/06/24==
+# Rapport incident survenu le 24/06/24
 
 ## Sommaire
 
