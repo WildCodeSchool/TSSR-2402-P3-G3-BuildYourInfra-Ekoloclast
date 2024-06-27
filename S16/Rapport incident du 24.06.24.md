@@ -76,7 +76,7 @@ _Réalisé le 26/06/24_
 
 ![etat2](https://github.com/WildCodeSchool/TSSR-2402-P3-G3-BuildYourInfra-Ekoloclast/blob/main/S16/Sources/etat2.PNG?raw=true)
 
->Nous avons en premieu lieu rétabli le réseau pour que les collaborateurs puissent travailler dès le Lundi avec l'accès à internet.
+>Nous avons en premier lieu rétabli le réseau pour que les collaborateurs puissent travailler dès le Lundi avec l'accès à internet.
 Dans un second temps il a fallu rétablir les services pour retrouver le maintien en condition opérationnelle.
 Notre documentation écrite tout au long du projet nous a était très utile et nous avons ajouter des informations sur les procédures d'installation VyOS et GLPI.
 
