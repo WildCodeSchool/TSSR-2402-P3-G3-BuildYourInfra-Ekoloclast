@@ -21,7 +21,7 @@ _Etat du parc le 24/06/24_
 
 
 
-| Priroité | Degré d'urgence | Action | Estimation date de résolution |
+| Prirorité | Degré d'urgence | Action | Estimation date de résolution |
 |   :---------: |  :-------: | :---------: | :---------: |
 | 1 |   <font color='red'>Critique</font>    |  Rétablir le réseau interne et externe, routeur VyOS en priorité + Passerelle PFsense | 24/06/24 |
 | 2 |   Sévère    |  Remise en état du DC principal EKO-MSTR et EKO-CORE (Raid + réplication) | 25/06/24 |
