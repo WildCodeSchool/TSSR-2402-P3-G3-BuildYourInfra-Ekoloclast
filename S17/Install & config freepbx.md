@@ -52,4 +52,12 @@ Sélectionne alors le bouton ```Upgrade to ....```
 Quand tu as géré tous les modules, clique sur ```Process```
 Dans la fenêtre qui apparaît, clique sur ```Confirm```. 
 ![](https://raw.githubusercontent.com/WildCodeSchool/TSSR-2402-P3-G3-BuildYourInfra-Ekoloclast/main/S17/Freepbx/6.png)
-Recommencer jusqu'a ce que tout sois a jour.
+Recommencer jusqu'a ce que tout sois a jour. 
+# Création d'utilisateurs et de lignes sur FreePBX 
+- Va dans le menu ```Applications``` puis ```Extensions(postes)```, tu arrives sur cette fenêtre:
+  ![](https://raw.githubusercontent.com/WildCodeSchool/TSSR-2402-P3-G3-BuildYourInfra-Ekoloclast/main/S17/Freepbx/7.png)
+- Va sur sur l'onglet ```SIP [chan_pjsip] Extensions``` et clique sur le bouton ```+Add New SIP [chan_pjsip] Extension```.
+  ![](https://raw.githubusercontent.com/WildCodeSchool/TSSR-2402-P3-G3-BuildYourInfra-Ekoloclast/main/S17/Freepbx/8.png)
+- La fenêtre suivante va s'afficher :
+  ![](https://raw.githubusercontent.com/WildCodeSchool/TSSR-2402-P3-G3-BuildYourInfra-Ekoloclast/main/S17/Freepbx/9.png)
+- Remplir le documents avec les informations des clients, Clique sur le bouton ```ubmit``` puis ```Apply Config``` pour enregistrer. repeter l'action pour tout les utilisateurs.
