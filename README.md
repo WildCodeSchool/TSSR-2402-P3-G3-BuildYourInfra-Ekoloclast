@@ -31,7 +31,8 @@ Chaque collaborateur est équipé d'un ordinateur portable en WORKGOUP sous le p
 | 13 |  Mappage des lecteurs   | Mise en place des dossiers partagés | Mise en place sauvegarde de volume| **SM** - Mise en place restriction d'utilisation des machines (plage horaire) | **PO** Mise en place de LAPS |
 | 14 |  / | **SM** - Mise en place de PRTG pour la supervision, Déplacement machines dans l’AD | Mise en place des logs et mise à jour des scripts | **PO** - Gestion AD : Modification, Ajout | Mise en place du raid & création du serveur RDS |
 | 15 |  / | **PO** - Mise en place de Zimbra pour la messagerie | Mise en place du logiciel Bitwarden | **SM** - Mise en place de Redmine pour le suivi du projet | Mise en place du logiciel Bitwarden + WDS |
-
+| 16 |  / | **SM** - Mise en place de Zimbra pour la messagerie | **PO** Réinstallation des serveurs Core,RDS et WDS - Mise en place du serveur WSUS - Rôles FSMO | Réinstallation du serveur GLPI - Remplacement et reconfiguration du routeur | Réinstallation du serveur GLPI - Remplacement et reconfiguration du routeur - Rédaction du rapport d’incident |
+| 17 |  / |   Mise en place du serveur Web - Mise en place du VPN | **SM**  Mise en place du VPN | Installation du serveur FreePBX | **PO** Installation du serveur FreePBX |
 
 ## Difficultés rencontrées & Solutions trouvées
 
@@ -44,18 +45,19 @@ Chaque collaborateur est équipé d'un ordinateur portable en WORKGOUP sous le p
 |    13    | Accès à Proxmox non optimal  - Problème dans l'installation  de bareOS | Une partie des objectifs ont été réalisés sur Virtualbox - Aucune pour l'instant|
 
 
-## Serveurs :
+## Serveurs/Conteneurs :
 
 | Nom  | Fonction | Adresse IP |
 | ----- | ------ | -------|
 | EKO-MSTR | Serveur ADDS/DNS/DHCP | 192.168.0.2 |
 | EKO-CORE | Serveur DC | 192.168.0.3 |
 | DEBIAN-SSH-BITWARDEN| Serveur SSH |192.168.0.4 |
-| DEBIAN-GLPI | Serveur GLPI | 192.168.0.5 |
+|GLPI | Conteneur GLPI | 192.168.0.5 |
 | PRTG | Serveur Supervision | 192.168.0.6 |
 | EKO-RDS-WDS | Serveur RDS/WDS | 192.168.0.7 |
-| EKO-ZIMBRA | Serveur Messagerie | 192.168.0.8 |
+| ZIMBRA | Conteneur Messagerie | 192.168.0.8 |
+| REDMINE | Conteneur gestion projet | 192.168.0.9 |
 | EKO-VyOSRouteur | Routeur | 192.168.0.253 |
-| pfsense | Firewall | 198.168.0.254 |
+| PFSENSE | Firewall | 198.168.0.254 |
 
 
