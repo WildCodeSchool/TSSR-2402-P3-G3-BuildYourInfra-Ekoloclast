@@ -32,7 +32,7 @@ Chaque collaborateur est équipé d'un ordinateur portable en WORKGOUP sous le p
 | 14 |  / | **SM** - Mise en place de PRTG pour la supervision, Déplacement machines dans l’AD | Mise en place des logs et mise à jour des scripts | **PO** - Gestion AD : Modification, Ajout | Mise en place du raid & création du serveur RDS |
 | 15 |  / | **PO** - Mise en place de Zimbra pour la messagerie | Mise en place du logiciel Bitwarden | **SM** - Mise en place de Redmine pour le suivi du projet | Mise en place du logiciel Bitwarden + WDS |
 | 16 |  / | **SM** - Mise en place de Zimbra pour la messagerie | **PO** Réinstallation des serveurs Core,RDS et WDS - Mise en place du serveur WSUS - Rôles FSMO | Réinstallation du serveur GLPI - Remplacement et reconfiguration du routeur | Réinstallation du serveur GLPI - Remplacement et reconfiguration du routeur - Rédaction du rapport d’incident |
-| 17 |  / |   Mise en place du serveur Web - Mise en place du VPN | **SM**  Mise en place du VPN | Installation du serveur FreePBX | **PO** Installation du serveur FreePBX |
+| 17 |  / |   Mise en place du serveur Web - Mise en place du VPN | **SM**  Mise en place du VPN - Mise en place serveur GMC | Installation du serveur FreePBX - Documentation | **PO** Installation du serveur FreePBX |
 
 ## Difficultés rencontrées & Solutions trouvées
 
@@ -57,6 +57,9 @@ Chaque collaborateur est équipé d'un ordinateur portable en WORKGOUP sous le p
 | EKO-RDS-WDS | Serveur RDS/WDS | 192.168.0.7 |
 | ZIMBRA | Conteneur Messagerie | 192.168.0.8 |
 | REDMINE | Conteneur gestion projet | 192.168.0.9 |
+| EKO-FREEPBX | Serveur téléphonie | 192.168.0.10 |
+| WWW | Conteneur WEB | 192.168.0.11 |
+| EKO-GCM | Serveur bastion | 192.168.0.12 |
 | EKO-VyOSRouteur | Routeur | 192.168.0.253 |
 | PFSENSE | Firewall | 198.168.0.254 |
 
