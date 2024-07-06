@@ -26,7 +26,7 @@
 - Compiler le code source de guacamole-server  
 `sudo make`
 - Installer le composant Guacamole Server  
-`sudo make instal``
+`sudo make instal`
   
 - Mettre a jour les liens entre guacamole-server et les librairies  
 `sudo ldconfig`
