@@ -5,7 +5,7 @@ Prérequis :
 >- Nom du serveur : EKO-MSTR
 >- Adresse IP : 192.168.0.2
 >- Masque de sous réseau : 255.255.255.0
->- Passerelle : 192.168.0.254
+>- Passerelle : 192.168.0.253
 
 ### 1. Installer le rôle ADDS
 
