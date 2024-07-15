@@ -72,7 +72,7 @@ Dans le serveur manager (barre à gauche), cliquer sur DHCP puis clic droit sur 
 
 Dans le terminal ``Sconfig``
 
-Name: ``EKO-MSTR-CORE``
+Name: ``EKO-CORE``
 
 ![changename](https://github.com/Seyia11/capture-DHCP/blob/main/Quete%20Dhcp%20windows%20server/changename.PNG?raw=true)
 
