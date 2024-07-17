@@ -49,8 +49,11 @@
 
 ### Export des Certificats nécessaires pour le client
 
-1. Dans **Authorities** , cliquer sur ![[Pasted image 20240717002603.png]] pour Exporter uniquement de CA de `EkoGreen-Auth`
-2. Dans **Certificats** , cliquer sur ![[Pasted image 20240717002603.png]] et ![[Pasted image 20240717003133.png]]pour Exporter le certificat et la clé de `EkoGreen-Client`
+1. Dans **Authorities** , cliquer sur ![image](https://github.com/user-attachments/assets/47529519-7533-420b-bb0b-16c5db99016a)
+ pour Exporter uniquement de CA de `EkoGreen-Auth`
+2. Dans **Certificats** , cliquer sur ![image](https://github.com/user-attachments/assets/8a78fea0-624b-44c2-a070-5bfd285fefcf)
+ et ![image](https://github.com/user-attachments/assets/d4806712-fe30-4c9c-bdb3-3cfcb461d6b2)
+ pour Exporter le certificat et la clé de `EkoGreen-Client`
 
 ## Configurer l'Instance Serveur OpenVPN
 
@@ -97,7 +100,8 @@ Après avoir crées les certificats, créer le serveur OpenVPN :
 
 4. Cliquer sur **Save**
 
-5. Une fois le serveur crée retourner sur le serveur en cliquant sur ![[Pasted image 20240717111713.png]] et copié en entier la clé `TLS` pour la joindre aux certificats a envoyé au client.
+5. Une fois le serveur crée retourner sur le serveur en cliquant sur ![image](https://github.com/user-attachments/assets/d90a644d-e637-42da-bdcc-f0826deea540)
+ et copié en entier la clé `TLS` pour la joindre aux certificats a envoyé au client.
 
 ### Création de l'autorisation de client
 
