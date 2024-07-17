@@ -9,7 +9,7 @@
 |EKO-MSTR |Windows server backup|[A jour](https://github.com/WildCodeSchool/TSSR-2402-P3-G3-BuildYourInfra-Ekoloclast/blob/main/S13/Sauvegarde%20du%20Partage%20de%20fichier.md)|[A jour](https://github.com/WildCodeSchool/TSSR-2402-P3-G3-BuildYourInfra-Ekoloclast/blob/main/S13/Sauvegarde%20du%20Partage%20de%20fichier.md)|
 |EKO-CORE|Windows AD-DS CORE|[A jour](https://github.com/WildCodeSchool/TSSR-2402-P3-G3-BuildYourInfra-Ekoloclast/blob/main/S10/Install.md)|Inexistante|
 |EKO-CORE|Windows Srv CORE Raid|[A jour](https://github.com/WildCodeSchool/TSSR-2402-P3-G3-BuildYourInfra-Ekoloclast/blob/main/S14/Installation%20RAID1%20sur%20Server%20Core.md)|Inexistante|
-|EKO-RDS|Windowd Srv RDS/WDS|[A jour](https://github.com/WildCodeSchool/TSSR-2402-P3-G3-BuildYourInfra-Ekoloclast/blob/main/S14/Installation%20Server%20RDS.md)|inexistant|
+|EKO-RDS|Windowd Srv RDS/WDS|[A jour](https://github.com/WildCodeSchool/TSSR-2402-P3-G3-BuildYourInfra-Ekoloclast/blob/main/S14/Installation%20Server%20RDS.md)|[A jour](https://github.com/WildCodeSchool/TSSR-2402-P3-G3-BuildYourInfra-Ekoloclast/blob/main/S15/USERGUIDE%20WDS.md)|
 |EKO-RDS|Windowd Srv WSUS|[A jour](https://github.com/WildCodeSchool/TSSR-2402-P3-G3-BuildYourInfra-Ekoloclast/blob/main/S16/Instalation%20WSUS.md)|inexistante|
 |glpi|Socle LAMP sur Debian|[A jour](https://github.com/WildCodeSchool/TSSR-2402-P3-G3-BuildYourInfra-Ekoloclast/blob/main/S11/Installation%20et%20configuration%20serveur%20GLPI.md)|[A jour](https://github.com/WildCodeSchool/TSSR-2402-P3-G3-BuildYourInfra-Ekoloclast/blob/main/S12/UserGuideGlpi.md)|
 |VyOS|Clone template Vyos|[A jour](https://github.com/WildCodeSchool/TSSR-2402-P3-G3-BuildYourInfra-Ekoloclast/blob/main/S12/INSTALL%20VyOS.md)|Inexistante|
