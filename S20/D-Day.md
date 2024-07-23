@@ -14,7 +14,7 @@ Mail reçu/envoyé :
 
 Reçu
 ```
-Salut Mec
+Salut meuf
 Je viens de tomber sur un site de jeu vachement sympa www.poki.com 
 Il y a plein de mini jeux, c'est très pratique on peu y jouer sur nos ordis, et c'est bien mieux que les tableurs excel ;)
 ```
@@ -53,7 +53,7 @@ Ma collègue abuse avec son PC
 Description 
 ```
 Bonjour, 
-je vois que mon collègue passe son temps sur un site de jeux au lieu de travailler, merci de faire le nécessaire afin de bloquer ce site et l'obliger a travailler.
+je vois que ma collègue passe son temps sur un site de jeux au lieu de travailler, merci de faire le nécessaire afin de bloquer ce site et l'obliger a travailler.
 ```
 
 Réponse du technicien DSI
